@@ -19,6 +19,7 @@ class Xiong(nn.Module):
             nn.MaxPool2d(2),
             nn.Flatten(),
             nn.Linear(64 * 4 * 4, 64),
+            nn.ReLU(),
             nn.Linear(64, 10),
             nn.Softmax(dim=1)
         )
